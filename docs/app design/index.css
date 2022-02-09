@@ -1,0 +1,58 @@
+body {
+  width:1920px;
+  margin:0 auto;
+}
+
+@media ( min-width:1920px ) {
+  body {
+    overflow-x:hidden;
+  }
+}
+/*프레임*/
+.frame-4{
+  background-color:rgb(78,99,245);
+  height:1280px;
+}
+.frame-7{
+  background-color:rgb(230,232,248);
+}
+/*영상 박스*/
+.iphone-box{
+  z-index:1;
+}
+/*내이름*/  
+.sign-1 svg path {
+  fill: rgba(255, 255, 255, 0);
+  stroke: #fff;
+  stroke-width: 3;
+  stroke-dasharray: 1000;
+  animation-name: dash-ani-1;
+  animation-duration: 3s;
+  animation-play-state: paused;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+.sign-1.aos-animate svg path {
+  animation-play-state: running;
+}
+
+@keyframes dash-ani-1 {
+  0% {
+    stroke-dashoffset: 1000;
+    stroke: rgba(255,255,255,0);
+  }
+
+  5% {
+    stroke: rgba(255,255,255,1);
+  }
+
+  95% {
+    stroke-dashoffset: 0;
+    stroke: rgba(255,255,255,1);
+  }
+
+  100% {
+    stroke: rgba(255,255,255,0);
+  }
+}
