@@ -1,26 +1,63 @@
 body {
-  width:1920px;
-  margin:0 auto;
+  width: 1920px;
+  margin: 0 auto;
 }
 
-@media ( min-width:1920px ) {
+@media (min-width:1920px) {
   body {
-    overflow-x:hidden;
+    overflow-x: hidden;
   }
 }
+
+/* 폰트적용 */
+@font-face {
+  font-family: 'SF_HambakSnow';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html>body {
+  font-family: 'SF_HambakSnow';
+}
+
+/*로딩중*/
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loading::after {
+  content: "loading..";
+  font-size: 30px;
+  font-weight: bold;
+
+}
+
 /*프레임*/
-.frame-4{
-  background-color:rgb(78,99,245);
-  height:1280px;
+.frame-4 {
+  background-color: rgb(78, 99, 245);
+  height: 1280px;
 }
-.frame-7{
-  background-color:rgb(230,232,248);
+
+.frame-7 {
+  background-color: rgb(230, 232, 248);
 }
+
 /*영상 박스*/
-.iphone-box{
-  z-index:1;
+.iphone-box {
+  z-index: 1;
 }
-/*내이름*/  
+
+/*내이름*/
 .sign-1 svg path {
   fill: rgba(255, 255, 255, 0);
   stroke: #fff;
@@ -40,19 +77,40 @@ body {
 @keyframes dash-ani-1 {
   0% {
     stroke-dashoffset: 1000;
-    stroke: rgba(255,255,255,0);
+    stroke: rgba(255, 255, 255, 0);
   }
 
   5% {
-    stroke: rgba(255,255,255,1);
+    stroke: rgba(255, 255, 255, 1);
   }
 
   95% {
     stroke-dashoffset: 0;
-    stroke: rgba(255,255,255,1);
+    stroke: rgba(255, 255, 255, 1);
   }
 
   100% {
-    stroke: rgba(255,255,255,0);
+    stroke: rgba(255, 255, 255, 0);
   }
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear,
+      left bottom,
+      left top,
+      color-stop(0.44, rgb(122, 153, 217)),
+      color-stop(0.72, rgb(73, 125, 189)),
+      color-stop(0.86, rgb(28, 58, 148)));
 }
